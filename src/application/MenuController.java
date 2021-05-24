@@ -80,7 +80,7 @@ public class MenuController {
     	 TextInputDialog tid = new TextInputDialog();
          tid.setHeaderText(null);
          tid.setTitle("String");
-         tid.setContentText("Introduce value for w");
+         tid.setContentText("Introduce a value for w");
          Optional<String> str = tid.showAndWait();
 
          try{
@@ -108,8 +108,6 @@ public class MenuController {
 
     @FXML
     void runCYK(ActionEvent event) {
-    	//checkGrammar();
-		//checkTextString();
 		
     	CYKPane.getChildren().clear();
     	
@@ -140,8 +138,6 @@ public class MenuController {
         hBox.getChildren().add(txt);
         txt.setPrefSize(80d, 30d);
         txt.setAlignment(Pos.CENTER);
-        //textField1.setFocused(Color.RED);
-        //textField1.setUnFocusColor(Color.WHITE);
         txt.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         txt.setFont(Font.font("System", FontWeight.BOLD, 14d));
 
@@ -149,8 +145,6 @@ public class MenuController {
         hBox.getChildren().add(txt1);
         txt1.setPrefSize(80d, 30d);
         txt1.setAlignment(Pos.CENTER);
-        //textField2.setFocused(Color.WHITE);
-        //textField2.setUnFocusColor(Color.WHITE);
         txt1.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         txt1.setFont(Font.font("System", FontWeight.BOLD, 14d));
         txt1.setText("->");
@@ -160,8 +154,6 @@ public class MenuController {
         hBox.getChildren().add(textField3);
         textField3.setPrefSize(505d, 30d);
         textField3.setAlignment(Pos.CENTER_LEFT);
-        //textField3.setFont(Color.RED);
-        //textField3.setUnFocusColor(Color.WHITE);
         textField3.setBackground(new Background(new BackgroundFill(Color.WHITE, CornerRadii.EMPTY, Insets.EMPTY)));
         textField3.setFont(Font.font("System", 14d));
 
