@@ -37,7 +37,7 @@
       </Pane>
    </top>
    <bottom>
-      <HBox fx:id="buttonsPane" alignment="CENTER" prefHeight="49.0" prefWidth="700.0" spacing="100.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+      <HBox fx:id="buttonsPane" alignment="CENTER" prefHeight="49.0" prefWidth="588.0" spacing="100.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
          <children>
             <HBox fx:id="pane1" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
                <children>
@@ -59,7 +59,7 @@
         <tabs>
           <Tab fx:id="CFGTab" text="CFG">
                <content>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
+                  <Pane fx:id="tabPane1" prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <VBox fx:id="CFGPane" layoutY="68.0" prefHeight="303.0" prefWidth="700.0" />
                         <Pane prefHeight="71.0" prefWidth="700.0">
@@ -75,7 +75,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Pane layoutX="-1.0" prefHeight="373.0" prefWidth="700.0">
+                        <Pane fx:id="tabPane2" layoutX="-1.0" prefHeight="373.0" prefWidth="700.0">
                            <children>
                               <VBox fx:id="CYKPane" prefHeight="373.0" prefWidth="700.0" />
                            </children>

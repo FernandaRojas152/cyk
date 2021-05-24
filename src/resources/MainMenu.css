@@ -12,6 +12,14 @@
 	-fx-background-color: #FEFAEE; 
 }
 
+#tabPane1{
+	-fx-background-color: #484D6D;
+}
+
+#tabPane2{
+	-fx-background-color: #C33C54;
+}
+
 #buttonsPane{
 	-fx-background-color: #FEFAEE; 
 }
