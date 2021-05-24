@@ -31,14 +31,24 @@
 	-fx-font-size: 35;
 }
 
-.button{
-	-fx-font-family: 'Little Panda';
-	-fx-font-size: 20;
+.tab-pane{
+	-fx-skin: "com.sun.javafx.scene.control.skin.TabPaneSkin";
+	-fx-tab-min-height: 2em;
+	-fx-tab-max-height: 2em;
 }
-
 .tab .tab-label{
 	-fx-font-family: 'Little Panda';
 	-fx-font-size: 22;
+}
+
+.tab{
+	-fx-background-insets: 0, 1, 2;
+	-fx-background-radius: 5 5 0 0, 4 4 0 0, 3 3 0 0;
+	-fx-padding: 0.083333em 0.5em 0.083333em 0.5em;
+}
+
+.tab:focused{
+	-fx-focus-color: transparent;
 }
 
 .label{
@@ -62,4 +72,16 @@
     -fx-background-color:
         #EBA6A9,
         #FFFFFF;
+}
+
+.button {
+	-fx-font-family: 'Little Panda';
+    -fx-font-size: 20;
+    -fx-text-fill: black;
+    -fx-background-color: linear-gradient(to top right, #FF7477, #E69597);
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: linear-gradient(to top right, #7D3CCD, #A97DDE, #C5BBF2);
+  -fx-text-fill: white;
 }
