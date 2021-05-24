@@ -40,3 +40,26 @@
 	-fx-font-family: 'Little Panda';
 	-fx-font-size: 22;
 }
+
+.label{
+	-fx-font-family: 'Little Panda';
+	-fx-font-size: 15;
+}
+
+.text-field {
+    -fx-background-color: #C1666B, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0;
+    -fx-font-family: 'Little Panda';
+    -fx-font-size: 19;
+}
+
+.text-field:focused {
+    -fx-background-color: #A52422, -fx-background ;
+}
+
+.text-field:focused:hover {
+    -fx-background-color:
+        #EBA6A9,
+        #FFFFFF;
+}

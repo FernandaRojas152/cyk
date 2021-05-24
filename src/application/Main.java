@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 
 public class Main extends Application {
 	private MenuController menu;
@@ -19,7 +20,7 @@ public class Main extends Application {
 			Scene scene= new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("/resources/MainMenu.css").toExternalForm());
 			primaryStage.setScene(scene);
-			//primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("icon.png")));
+			primaryStage.getIcons().add(new Image(Main.class.getResourceAsStream("computer.png")));
 			primaryStage.setTitle("cyk algorithm");
 			primaryStage.setResizable(false);
 			primaryStage.show();
