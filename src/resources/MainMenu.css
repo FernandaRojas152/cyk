@@ -3,7 +3,7 @@
 	src: url('fonts/LittlePanda_Demo.otf');
 }
 
-@font-face {
+@font-face{
 	font-family: 'Snowy Night';
 	src: url('fonts/Snowy_Night.ttf');
 }
@@ -17,11 +17,7 @@
 }
 
 #tabPane2{
-	-fx-background-color: #C33C54;
-}
-
-#buttonsPane{
-	-fx-background-color: #FEFAEE; 
+	-fx-background-color: #48A9A6;
 }
 
 #pane1{
@@ -40,4 +36,9 @@
 .button{
 	-fx-font-family: 'Little Panda';
 	-fx-font-size: 20;
+}
+
+.tab .tab-label{
+	-fx-font-family: 'Little Panda';
+	-fx-font-size: 22;
 }

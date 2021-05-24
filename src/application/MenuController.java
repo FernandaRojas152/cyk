@@ -2,10 +2,6 @@ package application;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
-
-import com.jfoenix.controls.JFXTextField;
-
-import customException.GrammarNotFoundException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
