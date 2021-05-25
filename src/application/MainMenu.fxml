@@ -64,7 +64,7 @@
                         <VBox fx:id="CFGPane" layoutY="68.0" prefHeight="303.0" prefWidth="700.0" />
                         <Pane prefHeight="71.0" prefWidth="700.0">
                            <children>
-                              <TextField fx:id="txtW" layoutX="276.0" layoutY="23.0" />
+                              <TextField fx:id="txtW" editable="false" layoutX="276.0" layoutY="23.0" />
                            </children>
                         </Pane>
                      </children>
