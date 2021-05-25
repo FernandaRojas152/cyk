@@ -70,11 +70,17 @@ public class MenuController {
         createNewRow();
     }
 
+    /**
+     * Adds a production to the grammar
+     */
     @FXML
     void addRow(ActionEvent event) {
     	createNewRow();
     }
 
+    /**
+     * Adds a new string to verify if it is produced by the grammar.
+     */
     @FXML
     void addString(ActionEvent event) {
     	 TextInputDialog tid = new TextInputDialog();
@@ -94,6 +100,9 @@ public class MenuController {
          txtW.setAlignment(Pos.CENTER);
     }
     
+    /**
+     * cleans fields 
+     */
     @FXML
     void clean(ActionEvent event) {
     	CFGPane.getChildren().clear();
@@ -106,12 +115,15 @@ public class MenuController {
         resultTab.setDisable(true);
     }
 
+    /**
+     * Method that executes the CYK algorithm.
+     */
     @FXML
     void runCYK(ActionEvent event) {
 		
     	CYKPane.getChildren().clear();
     	
-        this.CYK = new CYK(convertGrammarToMatrix(), txtW.getText().length());
+        this.CYK = new CYK(grammarToMatrix(), txtW.getText().length());
         this.CYK.addValueToMap();
         this.CYK.addFirstColumn(txtW.getText());
         this.CYK.CYKAlgorthm(txtW.getText());
@@ -124,6 +136,9 @@ public class MenuController {
         
     }
     
+    /**
+     * Method that creates  TextFields to add productions of the grammar.
+     */
     private void createNewRow(){
 
         HBox hBox = new HBox();
@@ -164,7 +179,11 @@ public class MenuController {
         });
     }
     
-    private String[][] convertGrammarToMatrix() {
+    /**
+     * Method that is responsible that converts the productions, to a matrix
+     * @return array to determine if it produces the string entered by the user
+     */
+    private String[][] grammarToMatrix() {
     	String[][] grammar = new String[CFGPane.getChildren().size()][2];
     	
     	for (int i = 0; i < CFGPane.getChildren().size(); i++) {
@@ -179,6 +198,9 @@ public class MenuController {
     	return grammar;
     }
     
+    /**
+     * message confirming or not the string was produced by the grammar.
+     */
 	private void showMessage() {
 
 		TextField textField = new TextField();
@@ -204,6 +226,9 @@ public class MenuController {
 		}
 	}
 	
+	 /**
+     * Method that creates the J indices.
+     */
 	private void generateMatrix() {
     	HBox hBox = new HBox();
     	VBox vBox = new VBox();
@@ -229,42 +254,44 @@ public class MenuController {
     	printMatrix(vBox);
     }
 	
-	 private void printMatrix(VBox vBox) {
-	    	GridPane gridPane = new GridPane();
-	    	String[][] matrixResult = this.CYK.getResultMatrix();
-	    	
-	    	gridPane.setHgap(3);
-	    	gridPane.setVgap(3);
-	    	gridPane.setAlignment(Pos.CENTER);
-	    	
-	    	for (int i = 0; i < matrixResult.length; i++) {
-	    		
-	    		Label label = new Label("i= " + (i+1));
-	    		label.setAlignment(Pos.CENTER);
-	    		label.setPrefHeight(30);
-	    		label.setPrefWidth(40);
-	    		gridPane.add(label, 0, (i+1));
-	    		
-				for (int j = 0; j < matrixResult[0].length; j++) {
-					
-					Label label2 = new Label();
-					label2.setAlignment(Pos.CENTER);
-					label2.setPrefHeight(30);
-					label2.setPrefWidth(40);
-					label2.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY, BorderWidths.DEFAULT)));
-					
-					if(matrixResult[i][j] != null) {
-						label2.setText("{" + matrixResult[i][j] + "}");
-					}else {
-						label2.setText("");
-					}
-					gridPane.add(label2, (j+1), (i+1));
+	/**
+	 * Result CYK algorithm.
+	 */
+	private void printMatrix(VBox vBox) {
+		GridPane gridPane = new GridPane();
+		String[][] matrixResult = this.CYK.getResultMatrix();
+
+		gridPane.setHgap(3);
+		gridPane.setVgap(3);
+		gridPane.setAlignment(Pos.CENTER);
+
+		for (int i = 0; i < matrixResult.length; i++) {
+
+			Label label = new Label("i= " + (i + 1));
+			label.setAlignment(Pos.CENTER);
+			label.setPrefHeight(30);
+			label.setPrefWidth(40);
+			gridPane.add(label, 0, (i + 1));
+
+			for (int j = 0; j < matrixResult[0].length; j++) {
+
+				Label label2 = new Label();
+				label2.setAlignment(Pos.CENTER);
+				label2.setPrefHeight(30);
+				label2.setPrefWidth(40);
+				label2.setBorder(new Border(new BorderStroke(Color.BLACK, BorderStrokeStyle.SOLID, CornerRadii.EMPTY,
+						BorderWidths.DEFAULT)));
+
+				if (matrixResult[i][j] != null) {
+					label2.setText("{" + matrixResult[i][j] + "}");
+				} else {
+					label2.setText("");
 				}
+				gridPane.add(label2, (j + 1), (i + 1));
 			}
-	    	vBox.getChildren().add(gridPane);
-	    	this.CYKPane.getChildren().add(vBox);
-	    }
-	    
+		}
+		vBox.getChildren().add(gridPane);
+		this.CYKPane.getChildren().add(vBox);
+	}
 
 }
-

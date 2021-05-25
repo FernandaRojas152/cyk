@@ -8,17 +8,17 @@ import java.util.List;
 public class CYK {
 	
 	/**
-	 * Represent all variables that contains the CFG
+	 * variables that contains the CFG
 	 */
 	ArrayList<String> vars;
 	
 	/**
-	 * Matrix initial with productions
+	 * Initial matrix with productions
 	 */
 	String[][] mainMatrix;
 	
 	/**
-	 * Matrix final
+	 * final matrix
 	 */
 	String[][] resultMatrix;
 	
