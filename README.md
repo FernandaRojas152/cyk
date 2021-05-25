@@ -16,10 +16,18 @@ Este permite determinar si una cadena puede ser generada por una gramatica libre
 
 ## Como abrir el proyecto
 
+Hay dos opciones para abrir el proyecto y utilizarlo.
+
+1. IDE
 - Abrir el proyecto en un IDE
 - Ir a la carpeta application
 - Abrir el archivo Main.java
 - Compilar
+
+2. Archivo .EXE
+- Ir a la carpeta "Ejecutable"
+- Buscar el archivo "cyk-algorithm.exe"
+- Dar doble clic para abrir el archivo.
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)](https://forthebadge.com) <br>
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
